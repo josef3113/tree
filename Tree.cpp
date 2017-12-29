@@ -4,7 +4,7 @@ template<typename N>
 Tree<N>::Tree(void)
 {
 	this->root=NULL;
-	//this->size=0;
+	this->size=0;
 }
 
 template<typename N>
@@ -14,12 +14,23 @@ Tree<N>::~Tree(void)
 
 
 	/*if(this->root!=NULL)
-	delete this->root;*/
+		delete this->root;*/
 }
+
+
+template<typename N>
+int Tree<N>::getsize()
+{
+	return this->size;
+}
+
+
+
 
 template<typename N>
 void Tree<N>::insert(const N& toinst)
 {
+	
 	//Tree<N> temp=root;
 	if(this->root==NULL)
 	{
@@ -60,7 +71,7 @@ void Tree<N>::insert(const N& toinst)
 		}
 
 	}
-	//	this->size++;
+		this->size++;
 }
 
 

@@ -9,9 +9,9 @@ template<typename N>
 class Tree
 {
 	Node<N> * root;
-	//int size;
+	int size;
 public:
-	//int getsize{return size;};
+	int getsize();
 	Tree(void);
 	~Tree(void);
 

@@ -13,21 +13,22 @@ Node<T>::Node(const T& data)
 template<typename T>
 Node<T>::~Node(void)
 {
-	if(this!=NULL)
-	{
-	
-		if(this->NEXTL!=NULL)
-		{
-		cout<<"delete l"<<endl;
-		delete this->NEXTL;
-		}
+		
 	
 		if(this->NEXTR!=NULL)
 		{
-			cout<<"delete r"<<endl;
+			
 		delete this->NEXTR;
+		cout<<"delete r of  "<<this->getDATA()<<endl;
 		}
-	}
+
+		if(this->NEXTL!=NULL)
+		{
+		
+		delete this->NEXTL;
+		cout<<"delete l  of  "<<this->getDATA()<<endl;
+		}
+	
 }
 
 template<typename T>

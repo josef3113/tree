@@ -17,11 +17,12 @@ void main ()
 	t.insert(2.6);
 	t.insert(9.3);
 	t.insert(9.2);
-	t.insert(2.1) ;
+	t.insert(2.1);
 	//cout<<t.getsize()<<endl;
 	//t.print() ;
 	cout<<t<<endl;
 	cout<<t.exists(3.5)<<endl;
+	cout<<t.getsize()<<endl;
 
 	/*Node <double> * tes;
 	Node<double> tr(3.98);
