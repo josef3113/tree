@@ -3,7 +3,7 @@
 template<typename N>
 Tree<N>::Tree(void)
 {
-	this->root=NULL;
+	//this->root=NULL;
 	this->size=0;
 }
 
@@ -13,8 +13,10 @@ Tree<N>::~Tree(void)
 	//todo add distractor
 
 
-	/*if(this->root!=NULL)
-		delete this->root;*/
+	if(this->root!=NULL)
+		delete this->root;
+	
+
 }
 
 

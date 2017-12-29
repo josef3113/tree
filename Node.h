@@ -19,6 +19,7 @@ public:
 	//---setrs
 	void setNEXTR( const T&);
 	void setNEXTL(const T& );
+	void setDATA(const T&);
 
 	void setITEMNEXTL( Node* );
 	void setITEMNEXTR( Node* );

@@ -61,6 +61,12 @@ void Node<T>::setNEXTL(const T& data)
 }
 
 template<typename T>
+void Node<T>::setDATA(const T & change)
+{
+	this->data=change;
+}
+
+template<typename T>
 void Node<T>::setITEMNEXTL( Node<T>* sonL )
 {
 	this->NEXTL=sonL;
