@@ -7,20 +7,21 @@ using namespace std;
 
 void main ()
 {
-	Tree<int> t ;
+	Tree<double> t ;
 
-	t.insert(3);
-	t.insert(4);
-	t.insert(2);
-	t.insert(3);
-	t.insert(4);
-	t.insert(2);
-	t.insert(9);
-	t.insert(9);
-	t.insert(2) ;
-
+	t.insert(3.9);
+	t.insert(4.8);
+	t.insert(2.7);
+	t.insert(3.5);
+	t.insert(4.9);
+	t.insert(2.6);
+	t.insert(9.3);
+	t.insert(9.2);
+	t.insert(2.1) ;
+	//cout<<t.getsize()<<endl;
 	//t.print() ;
-	cout<<t<<endl ;
+	cout<<t<<endl;
+	cout<<t.exists(3.5)<<endl;
 
 	/*Node <double> * tes;
 	Node<double> tr(3.98);
