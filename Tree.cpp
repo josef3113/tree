@@ -17,13 +17,12 @@ Tree<N>::~Tree(void)
 }
 
 template<typename N>
-Node<N>* Tree<N>::insert(const N& toinst)
+void Tree<N>::insert(const N& toinst)
 {
 	//Tree<N> temp=root;
 	if(this->root==NULL)
 	{
 		this->root=new Node<N> (toinst);
-		return root;
 	}
 	else
 	{
@@ -73,3 +72,31 @@ void Tree<N>::print()
 
 	
 }
+
+//template<typename N>
+//ostream& operator<< (ostream& out,Tree<N> & toprint)
+//{
+//	/*Tree <N> temp ;
+//	temp.root=this->root;
+//	temp.root->printNode();*/
+//	/*if(toprint.root!=NULL)
+//	{
+//		out<<toprint.root->getDATA()<<endl;
+//	}
+//	else
+//	{
+//		out<<"tree is empty"<<endl;
+//	}
+//*/
+//	return out;
+//
+//}
+
+//template<typename N> inline std::ostream& operator<<(std::ostream& out, const Tree<N>& val)
+//{
+//	Tree <N> temp ;
+//	temp.root=this->root;
+//	temp.root->printNode();
+//    //out << val.data;
+//    return out;
+//}
