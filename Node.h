@@ -1,5 +1,6 @@
 #pragma once
 #include<iostream>
+using namespace std;
 
 template<typename T>
 class Node
@@ -15,23 +16,17 @@ public:
 	Node(const T&);
 	~Node(void);
 
-	//void BINinsert(const T&);
 	//---setrs
-	void setNEXTR( const T&);
-	void setNEXTL(const T& );
-	//void setDATA(const T&);
+	void setNEXTR( const T&);  //canot be const because NEXTR changin
+	void setNEXTL(const T& );  //canot be const because NEXTL changin
 
-	void setITEMNEXTL( Node* );
-	void setITEMNEXTR( Node* );
 
 	//---getrs
-	T getDATA()const;
+	T getDATA()const{return data;};
 	Node* getNEXTL()const{return NEXTL;}
 	Node* getNEXTR()const{return NEXTR;}
 
-	void printNode();
-
-	//friend ostream& operator <<(ostream & out , Node & toprint);
+	void printNode()const;
 
 };
 

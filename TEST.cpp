@@ -7,42 +7,44 @@ using namespace std;
 
 void main ()
 {
-	Tree<double> t ;
+	Tree<double> Dtree ;
 
-	t.insert(3.9);
-	t.insert(4.8);
-	t.insert(4.8);
-	t.insert(4.8);
-	t.insert(3.5);
-	t.insert(2.6);
-	t.insert(9.3);
-	t.insert(9.2);
-	t.insert(2.1);
-	//cout<<t.getsize()<<endl;
-	//t.print() ;
-	cout<<t<<endl;
-	cout<<t.exists(3.5)<<endl;
-	cout<<t.getsize()<<endl;
+	Dtree.insert(3.9);
+	Dtree.insert(4.8);
+	Dtree.insert(4.8);
+	Dtree.insert(4.8);
+	Dtree.insert(3.5);
+	Dtree.insert(2.6);
+	Dtree.insert(9.3);
+	Dtree.insert(9.2);
+	Dtree.insert(2.1);
+	cout<<"the size of Dtree is:";			
+	cout<<Dtree.getsize()<<endl;
+	cout<<Dtree<<endl;
+	cout<<"the value exists in Dtree:";
+	cout<<Dtree.exists(3.5)<<endl;
+	cout<<"the value exists in Dtree:";
+	cout<<Dtree.exists(3.3)<<endl;
+	
+	cout<<endl<<endl;
 
-	////*Node <double> * tes;
-	//Node<double> tr(3.98);
-	////Node <int> r (4);
-	////Node <int> w (6);
+	Tree<int> Itree ;
 
-	/*tr.BINinsert(3.6);
-	tr.BINinsert(4.9);
-	tr.BINinsert(5.9);
-	tr.BINinsert(9.90);
-	tr.BINinsert(7.5);
-	tr.BINinsert(6.9);*/
-	////tes=tr.getNEXTR();
-	////tes->printNode();
-	////tr.setNEXTR(4.78);
-	////tr.setNEXTL(6.56); 
-	//tr.printNode();
-	////delete tr;
-	////r.printNode();
-	////w.printNode();
+	Itree.insert(6);
+	Itree.insert(8);
+	Itree.insert(3);
+	Itree.insert(5);
+	Itree.insert(10) ;
+	Itree.insert(12);
+	Itree.insert(1);
+	Itree.insert(6);
+	cout<<"the size of Itree is:";			
+	cout<<Itree.getsize()<<endl;
+	cout<<Itree<<endl;
+	cout<<"the value exists in Itree:";
+	cout<<Itree.exists(6)<<endl;
+	cout<<"the value exists in Itree:";
+	cout<<Itree.exists(7)<<endl;
 	
 	_CrtSetDbgFlag(_CRTDBG_ALLOC_MEM_DF|_CRTDBG_LEAK_CHECK_DF);
 	system("pause") ;

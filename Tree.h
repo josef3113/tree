@@ -1,8 +1,6 @@
 
 #pragma once
 #include "Node.h"
-#include<iostream>
-using namespace std;
 
 
 template<typename N>
