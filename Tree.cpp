@@ -3,16 +3,13 @@
 template<typename N>
 Tree<N>::Tree(void)
 {
-	//this->root=NULL;
+	this->root=NULL;
 	this->size=0;
 }
 
 template<typename N>
 Tree<N>::~Tree(void)
 {
-	//todo add distractor
-
-
 	if(this->root!=NULL)
 		delete this->root;
 	
@@ -21,7 +18,7 @@ Tree<N>::~Tree(void)
 
 
 template<typename N>
-int Tree<N>::getsize()
+int Tree<N>::getsize() const
 {
 	return this->size;
 }
@@ -32,8 +29,8 @@ int Tree<N>::getsize()
 template<typename N>
 void Tree<N>::insert(const N& toinst)
 {
+	//i know that in my tree can be two value thats equal i choich to enable this becaus if the user try to use in tree for person and operator < will be on hight of person i want to enable to insert to tree some person with the same hight
 	
-	//Tree<N> temp=root;
 	if(this->root==NULL)
 	{
 		this->root=new Node<N> (toinst);
@@ -45,20 +42,20 @@ void Tree<N>::insert(const N& toinst)
 		temp=this->root;
 		while(!isinsert)
 		{
-			if(toinst < temp->getDATA())
+			if(toinst < temp->getDATA())		 //if inst small from data so he need to be at the left tree so check is NEXTL is null insert the inst there but if is not null continuie to search place of inst
 			{
-				if(temp->getNEXTL()==NULL)
-				{
-					temp->setNEXTL(toinst);
-					isinsert=true;
-				}
-				else
-				{
-					temp=temp->getNEXTL();
-				}
+					if(temp->getNEXTL()==NULL)
+					{
+						temp->setNEXTL(toinst);
+						isinsert=true;
+					}
+					else
+					{
+						temp=temp->getNEXTL();
+					}
 
 			}
-			else//////////////////////////////////////////
+			else                      //if inst big from data so he need to be at the left tree so check is NEXTR is null insert the inst there but if is not null continuie to search place of inst
 			{
 				if(temp->getNEXTR()==NULL)
 				{
@@ -69,7 +66,7 @@ void Tree<N>::insert(const N& toinst)
 				{
 					temp=temp->getNEXTR();
 				}
-			}/////////////////////////////////////////////
+			}
 		}
 
 	}
@@ -78,17 +75,16 @@ void Tree<N>::insert(const N& toinst)
 
 
 template<typename N>
-void Tree<N>::print()
+void Tree<N>::print() const
 {
 	Tree <N> temp ;
-	temp.root=this->root;
-	temp.root->printNode();
+	this->root->printNode();
 
 
 }
 
 template<typename N>
-bool Tree<N>::exists(const N & tofind)
+bool Tree<N>::exists(const N & tofind) const
 {
 	if(this->root!=NULL)
 	{

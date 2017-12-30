@@ -34,17 +34,24 @@ Node<T>::~Node(void)
 template<typename T>
 void Node<T>::printNode()
 {
-	if(this)
-	{
+	
+	
 		if(this->NEXTL!=NULL)
+		{
 		this->NEXTL->printNode();
+			//cout<<"  ";
+
+		}
 
 		cout<<this->data<<endl;
 	
 
 		if(this->NEXTR!=NULL)
+		{
+			//cout<<"  ";
 		this->NEXTR->printNode();
-	}
+		}
+	
 }
 
 //---setrs
@@ -60,11 +67,11 @@ void Node<T>::setNEXTL(const T& data)
 	this->NEXTL=new Node<T>(data);
 }
 
-template<typename T>
-void Node<T>::setDATA(const T & change)
-{
-	this->data=change;
-}
+//template<typename T>
+//void Node<T>::setDATA(const T & change)
+//{
+//	this->data=change;
+//}
 
 template<typename T>
 void Node<T>::setITEMNEXTL( Node<T>* sonL )
@@ -96,26 +103,26 @@ T Node<T>::getDATA()const
 
 
 
-template<typename T>
-void Node<T>::BINinsert(const T& data)
-{
-	if(data < this->data)
-	{
-		if(this->NEXTL==NULL)
-			this->setNEXTL(data);
-		else
-			this->NEXTL->BINinsert(data);
-	}
-
-	else
-	{
-		if(this->NEXTR==NULL)
-			this->setNEXTR(data);
-		else
-			this->NEXTR->BINinsert(data);
-
-	}
-
-}
+//template<typename T>
+//void Node<T>::BINinsert(const T& data)
+//{
+//	if(data < this->data)
+//	{
+//		if(this->NEXTL==NULL)
+//			this->setNEXTL(data);
+//		else
+//			this->NEXTL->BINinsert(data);
+//	}
+//
+//	else
+//	{
+//		if(this->NEXTR==NULL)
+//			this->setNEXTR(data);
+//		else
+//			this->NEXTR->BINinsert(data);
+//
+//	}
+//
+//}
 
 

@@ -11,21 +11,26 @@ class Tree
 	Node<N> * root;
 	int size;
 public:
-	int getsize();
+	
 	Tree(void);
 	~Tree(void);
 
-	void insert(const N&);  //canot be const because in the first node root changh
-	void print();
-	bool exists(const N&);
+	//-----getrs
+	int getsize()const;
+
+	//----function of tree
+
+	void insert(const N&);  //canot be const because in the first insert root changh
+	void print()const;
+	bool exists(const N&)const;
 
 
 
 
-	friend ostream& operator << (ostream& out,Tree <N>& toprint)
+	friend ostream& operator << (ostream& out,const Tree <N>& toprint)
 		{
-			//out<<"size is:"<<toprint->getsize();
-		toprint.print();
+			out<<"tree print inorder so the output sorted"<<endl;
+			toprint.print();
 		return out;
 	};
 	
