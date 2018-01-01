@@ -19,20 +19,17 @@ public:
 	//----function of tree
 
 	void insert(const N&);  //canot be const because in the first insert root changh
-	void print()const;
+	//void print()const;
 	bool exists(const N&)const;
 
 
 
 
-	friend ostream& operator << (ostream& out,const Tree <N>& toprint)
-		{
-			out<<"tree print inorder so the output sorted"<<endl;
-			toprint.print();
-		return out;
-	};
+	friend ostream& operator << <>(ostream& out,const Tree <N>& toprint);
 	
 };
+
+
 
 
 

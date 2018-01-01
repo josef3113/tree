@@ -75,11 +75,11 @@ void Tree<N>::insert(const N& toinst)
 }
 
 
-template<typename N>
-void Tree<N>::print() const
-{
-	this->root->printNode();
-}
+//template<typename N>
+//void Tree<N>::print() const
+//{
+//	this->root->printNode();
+//}
 
 template<typename N>
 bool Tree<N>::exists(const N & tofind) const
@@ -91,7 +91,7 @@ bool Tree<N>::exists(const N & tofind) const
 		while(1)
 		{
 			if(tofind==temp->getDATA())
-				return true;
+				return true;				//check if need to "temp=NULL" befor because when the program close she do delete to temp
 			else
 			{
 				if( tofind <  temp->getDATA()  )  //if its small so check if next left =NULL so value not exists but if nexl left not null check in the left tree 
@@ -115,3 +115,13 @@ bool Tree<N>::exists(const N & tofind) const
 	}
 	  return false ;    //if root==NULL so return false
 }
+
+
+
+template <typename N>
+ostream& operator << <>(ostream& out,const Tree <N>& toprint)
+		{
+			out<<"tree print inorder so the output sorted"<<endl;
+			toprint.root->printNode();
+		return out;
+	};

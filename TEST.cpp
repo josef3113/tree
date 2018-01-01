@@ -15,26 +15,26 @@ void main ()
 	Dtree.insert(4.8);
 	Dtree.insert(3.5);
 	Dtree.insert(2.6);
-	Dtree.insert(9.3);
+	Dtree.insert(9.3) ;
 	Dtree.insert(9.2);
 	Dtree.insert(2.1);
 	cout<<"the size of Dtree is:";			
 	cout<<Dtree.getsize()<<endl;
 	cout<<Dtree<<endl;
 	cout<<"the value exists in Dtree:";
-	cout<<Dtree.exists(3.5)<<endl;
+	cout<<Dtree.exists(9.3)<<endl;
 	cout<<"the value exists in Dtree:";
 	cout<<Dtree.exists(3.3)<<endl;
 	
-	cout<<endl<<endl;
+	cout<<endl<<endl ;
 
 	Tree<int> Itree ;
 
-	Itree.insert(6);
+	Itree.insert(6) ;
 	Itree.insert(8);
 	Itree.insert(3);
 	Itree.insert(5);
-	Itree.insert(10) ;
+	Itree.insert(10);
 	Itree.insert(12);
 	Itree.insert(1);
 	Itree.insert(6);

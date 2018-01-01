@@ -26,7 +26,8 @@ public:
 	Node* getNEXTL()const{return NEXTL;}
 	Node* getNEXTR()const{return NEXTR;}
 
-	void printNode()const;
+	void printNode()const;	 //print the node whith sons (inorder traversal)
+	void printData()const;	 //print only the data of node
 
 };
 

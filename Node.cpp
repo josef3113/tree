@@ -50,6 +50,12 @@ void Node<T>::printNode()const		   //inorder traversal
 	
 }
 
+template<typename T>
+void Node<T>::printData()const
+{
+	cout<<this->getDATA()<<endl;
+}
+
 //---setrs
 template<typename T>
 void Node<T>::setNEXTR(const T& data)
