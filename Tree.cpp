@@ -70,7 +70,7 @@ void Tree<N>::insert(const N& toinst)
 					temp=temp->getNEXTR();
 				}
 			}
-			
+			 
 		}
 
 	}	 
