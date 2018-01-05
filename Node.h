@@ -13,10 +13,12 @@ class Node
 
 public:
 
-	Node(const T&);
-	~Node(void);
+	Node(const T&);	   // cant be defult constractor because of tamplate
+	virtual ~Node(void);
 
 	//---setrs
+
+
 	void setNEXTR( const T&);  //canot be const because NEXTR changin
 	void setNEXTL(const T& );  //canot be const because NEXTL changin
 

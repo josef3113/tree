@@ -19,7 +19,6 @@ public:
 	//----function of tree
 
 	void insert(const N&);  //canot be const because in the first insert root changh
-	//void print()const;
 	bool exists(const N&)const;
 
 

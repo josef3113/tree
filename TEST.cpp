@@ -7,15 +7,17 @@ using namespace std;
 
 void main ()
 {
+
 	Tree<double> Dtree ;
 
+	cout<<Dtree<<endl;
 	Dtree.insert(3.9);
 	Dtree.insert(4.8);
 	Dtree.insert(4.8);
 	Dtree.insert(4.8);
 	Dtree.insert(3.5);
 	Dtree.insert(2.6);
-	Dtree.insert(9.3) ;
+	Dtree.insert(9.3);
 	Dtree.insert(9.2);
 	Dtree.insert(2.1);
 	cout<<"the size of Dtree is:";			

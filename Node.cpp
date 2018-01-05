@@ -33,7 +33,7 @@ Node<T>::~Node(void)
 template<typename T>
 void Node<T>::printNode()const		   //inorder traversal
 {
-	
+	 
 	
 		if(this->NEXTL!=NULL)
 		{

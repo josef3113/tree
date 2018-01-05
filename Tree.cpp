@@ -56,7 +56,7 @@ void Tree<N>::insert(const N& toinst)
 					}
 
 			}
-			else                      //if inst big from data so he need to be at the left tree so check is NEXTR is null insert the inst there but if is not null continuie to search place of inst
+			else                      //if inst big or equal from data so he need to be at the right tree so check is NEXTR is null insert the inst there but if is not null continuie to search place of inst
 			{
 				if(temp->getNEXTR()==NULL)
 				{
@@ -68,18 +68,14 @@ void Tree<N>::insert(const N& toinst)
 					temp=temp->getNEXTR();
 				}
 			}
+			
 		}
 
-	}
+	}	 temp=NULL;
 		this->size++;
 }
 
 
-//template<typename N>
-//void Tree<N>::print() const
-//{
-//	this->root->printNode();
-//}
 
 template<typename N>
 bool Tree<N>::exists(const N & tofind) const
@@ -88,8 +84,8 @@ bool Tree<N>::exists(const N & tofind) const
 	{
 		Node<N> * temp;
 		temp=this->root;
-		while(1)
-		{
+		while(true)
+		{	 
 			if(tofind==temp->getDATA())
 				return true;				//check if need to "temp=NULL" befor because when the program close she do delete to temp
 			else
@@ -97,7 +93,10 @@ bool Tree<N>::exists(const N & tofind) const
 				if( tofind <  temp->getDATA()  )  //if its small so check if next left =NULL so value not exists but if nexl left not null check in the left tree 
 				{
 					if(temp->getNEXTL()==NULL)
+					{
+						temp=NULL;
 						return false;
+					}
 					else
 						temp=temp->getNEXTL();
 				}
@@ -105,7 +104,10 @@ bool Tree<N>::exists(const N & tofind) const
 				else                              //if its big so check if next right =NULL so value not exists but if nexl right not null check in the right tree 
 				{
 					if(temp->getNEXTR()==NULL)
+					{
+						temp=NULL;
 						return false;
+					}
 					else
 						temp=temp->getNEXTR();
 				}
@@ -120,8 +122,15 @@ bool Tree<N>::exists(const N & tofind) const
 
 template <typename N>
 ostream& operator << <>(ostream& out,const Tree <N>& toprint)
-		{
+	{
+			if(toprint.root!=NULL)
+			{
 			out<<"tree print inorder so the output sorted"<<endl;
 			toprint.root->printNode();
-		return out;
-	};
+			}
+			else 
+			{
+				out<<"the tree is empty"<<endl;
+			}
+		    return out;
+	}
