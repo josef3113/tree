@@ -1,13 +1,13 @@
-﻿Build started 1/5/2018 12:16:07 PM.
+﻿Build started 1/5/2018 12:26:48 PM.
      1>Project "C:\Users\josef\Documents\Visual Studio 2010\Projects\gg\TREEsearch\TREEsearch\TREEsearch.vcxproj" on node 2 (build target(s)).
      1>InitializeBuildStatus:
          Creating "Debug\TREEsearch.unsuccessfulbuild" because "AlwaysCreate" was specified.
        ClCompile:
          c:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc100.pdb" /Gd /TP /analyze- /errorReport:prompt Node.cpp TEST.cpp Tree.cpp
          Tree.cpp
+         TEST.cpp
          Generating Code...
          Skipping... (no relevant changes detected)
-         TEST.cpp
          Node.cpp
        ManifestResourceCompile:
          All outputs are up-to-date.
@@ -29,4 +29,4 @@
 
 Build succeeded.
 
-Time Elapsed 00:00:01.94
+Time Elapsed 00:00:01.28

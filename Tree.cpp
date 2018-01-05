@@ -49,6 +49,7 @@ void Tree<N>::insert(const N& toinst)
 					{
 						temp->setNEXTL(toinst);
 						isinsert=true;
+						temp=NULL;
 					}
 					else
 					{
@@ -62,6 +63,7 @@ void Tree<N>::insert(const N& toinst)
 				{
 					temp->setNEXTR(toinst);
 					isinsert=true;
+					temp=NULL;
 				}
 				else
 				{
@@ -71,7 +73,7 @@ void Tree<N>::insert(const N& toinst)
 			
 		}
 
-	}	 temp=NULL;
+	}	 
 		this->size++;
 }
 
